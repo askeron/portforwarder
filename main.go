@@ -8,10 +8,10 @@ import (
 )
 
 func main() {
-	localPortPtr := flag.Int("local-port", 9090, "the local port that is opened")
-	remoteEnabledPtr := flag.Bool("remote-enabled", false, "allow remotes to connect to your local port")
+	localPortPtr := flag.Int("local-port", 8888, "the local port that is opened")
+	remoteEnabledPtr := flag.Bool("remote-enabled", true, "allow remotes to connect to your local port")
 	var target string
-	flag.StringVar(&target, "target", "157.230.121.173:9090", "target where the traff should be forwarded to")
+	flag.StringVar(&target, "target", "127.0.0.1:9999", "target where the traff should be forwarded to")
 
 	flag.Parse()
 
