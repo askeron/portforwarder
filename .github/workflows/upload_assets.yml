@@ -19,7 +19,7 @@ jobs:
           echo "GO111MODULE=on" >> $GITHUB_ENV
           GOOS=windows GOARCH=amd64 go build -o bin/portforwarder-windows-amd64.exe
           GOOS=linux   GOARCH=amd64 go build -o bin/portforwarder-linux-amd64
-          GOOS=darwin  GOARCH=amd64 go build -o bin/portforwarder-macos-amd64
+          GOOS=darwin  GOARCH=amd64 go build -o bin/portforwarder-darwin-amd64
       - name: upload artifacts
         uses: actions/upload-artifact@master
         with:
